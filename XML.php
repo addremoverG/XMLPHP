@@ -173,7 +173,7 @@ class XML
             $close = strtotime('+1 day', $close);
         }
         
-        if ($check > $open && $check < $close) {
+        if ($check >= $open && $check <= $close) {
             $this->active ++;
             $this->xmlWriter->startElement('is_active');
             $this->xmlWriter->writeCdata('true');
